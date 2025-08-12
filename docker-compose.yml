@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+    image: my-go-app:latest
+    volumes:
+      - ./uploads:/uploads
+    ports:
+      - "7000:7000"
+    restart: unless-stopped
